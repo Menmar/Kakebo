@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/kakebo?currentSchema=kakebo
+  jpa:    hibernate:      ddl-auto: create # create para crear cada vez que arranca validate para mantener la DB
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    properties:      hibernate:
+      format_sql: false
+    show-sql: true
